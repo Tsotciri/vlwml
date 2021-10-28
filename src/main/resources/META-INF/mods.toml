@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="vldm"
+version="1.0.0"
+displayName="VillageWars Music Liblary"
+credits="This mod was Created using MCreator (https://mcreator.net/about)"
+displayURL="https://mcreator.net"
+authors="Tsotciri"
+description='''
+This is the VillageWars Music Liblary an addon to the VLDM (VillageWars Dedicated Mod)       
+'''
+
+[[dependencies.vldm]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

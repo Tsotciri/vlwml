@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_sus",
+    "name": "Sus",
+    "description": "u sus",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:sus"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

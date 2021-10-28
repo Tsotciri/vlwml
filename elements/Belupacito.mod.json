@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_belupacito",
+    "name": "Music disc",
+    "description": "Beluga - Belupacito",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:belupacito"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "onRightClickedOnBlock": {
+      "name": "BelupacitoBeatDrop"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "otherside": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vldm:otherdisde",
+        "stream": true
+      }
+    ]
+  },
+  "shulk": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vldm:shulk",
+        "stream": true
+      }
+    ]
+  },
+  "belupacito": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vldm:belupacito",
+        "stream": true
+      }
+    ]
+  },
+  "pigstep_remix": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vldm:pigstep_remix",
+        "stream": true
+      }
+    ]
+  },
+  "sus": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vldm:sus",
+        "stream": true
+      }
+    ]
+  }
+}

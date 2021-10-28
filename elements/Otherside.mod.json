@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_otherside",
+    "name": "Music disc",
+    "description": "Lena Raine - Otherside",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:otherside"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

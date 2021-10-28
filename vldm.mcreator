@@ -1,0 +1,176 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Otherside",
+      "type": "musicdisc",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "otherside"
+    },
+    {
+      "name": "Shulk",
+      "type": "musicdisc",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shulk"
+    },
+    {
+      "name": "Belupacito",
+      "type": "musicdisc",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito"
+    },
+    {
+      "name": "BelupacitoBeatDrop",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito_beat_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PigstepRemix",
+      "type": "musicdisc",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pigstep_remix"
+    },
+    {
+      "name": "Sus",
+      "type": "musicdisc",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sus"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "max_player_health",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "otherside",
+      "files": [
+        "otherdisde"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "shulk",
+      "files": [
+        "shulk"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "belupacito",
+      "files": [
+        "belupacito"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "pigstep_remix",
+      "files": [
+        "pigstep_remix"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "sus",
+      "files": [
+        "sus"
+      ],
+      "category": "record",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "subtitles.sus": "",
+      "subtitles.otherside": "",
+      "item.vldm.otherside.desc": "Lena Raine - Otherside",
+      "item.vldm.otherside": "Music disc",
+      "subtitles.pigstep_remix": "",
+      "item.vldm.belupacito.desc": "Beluga - Belupacito",
+      "death.attack.beatdrop": "%1$s Eardrums were erupted, along with their head",
+      "item.vldm.shulk": "Music disc",
+      "item.vldm.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
+      "item.vldm.sus.desc": "u sus",
+      "item.vldm.sus": "Sus",
+      "subtitles.belupacito": "",
+      "item.vldm.belupacito": "Music disc",
+      "item.vldm.shulk.desc": "JamiesName - Shulk",
+      "subtitles.shulk": "",
+      "item.vldm.pigstep_remix": "Music Disc"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "vldm",
+    "modName": "VillageWars Music Liblary",
+    "version": "1.0.0",
+    "description": "This is the VillageWars Music Liblary an addon to the VLDM (VillageWars Dedicated Mod)       ",
+    "author": "Tsotciri",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "This mod was Created using MCreator (https://mcreator.net/about)",
+    "modElementsPackage": "net.tsotciri.vldm",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100236710
+}

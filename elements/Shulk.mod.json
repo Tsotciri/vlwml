@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_shulk",
+    "name": "Music disc",
+    "description": "JamiesName - Shulk",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:shulk"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}
