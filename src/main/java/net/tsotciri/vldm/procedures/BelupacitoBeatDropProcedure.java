@@ -1,6 +1,6 @@
 package net.tsotciri.vldm.procedures;
 
-import net.tsotciri.vldm.VldmMod;
+import net.tsotciri.vldm.VlwdmMod;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
@@ -18,27 +18,27 @@ public class BelupacitoBeatDropProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				VldmMod.LOGGER.warn("Failed to load dependency entity for procedure BelupacitoBeatDrop!");
+				VlwdmMod.LOGGER.warn("Failed to load dependency entity for procedure BelupacitoBeatDrop!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				VldmMod.LOGGER.warn("Failed to load dependency x for procedure BelupacitoBeatDrop!");
+				VlwdmMod.LOGGER.warn("Failed to load dependency x for procedure BelupacitoBeatDrop!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				VldmMod.LOGGER.warn("Failed to load dependency y for procedure BelupacitoBeatDrop!");
+				VlwdmMod.LOGGER.warn("Failed to load dependency y for procedure BelupacitoBeatDrop!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				VldmMod.LOGGER.warn("Failed to load dependency z for procedure BelupacitoBeatDrop!");
+				VlwdmMod.LOGGER.warn("Failed to load dependency z for procedure BelupacitoBeatDrop!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				VldmMod.LOGGER.warn("Failed to load dependency world for procedure BelupacitoBeatDrop!");
+				VlwdmMod.LOGGER.warn("Failed to load dependency world for procedure BelupacitoBeatDrop!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

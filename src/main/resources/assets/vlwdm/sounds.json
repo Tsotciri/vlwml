@@ -3,7 +3,7 @@
     "category": "record",
     "sounds": [
       {
-        "name": "vldm:otherdisde",
+        "name": "vlwdm:otherdisde",
         "stream": true
       }
     ]
@@ -12,7 +12,7 @@
     "category": "record",
     "sounds": [
       {
-        "name": "vldm:shulk",
+        "name": "vlwdm:shulk",
         "stream": true
       }
     ]
@@ -21,7 +21,7 @@
     "category": "record",
     "sounds": [
       {
-        "name": "vldm:belupacito",
+        "name": "vlwdm:belupacito",
         "stream": true
       }
     ]
@@ -30,7 +30,7 @@
     "category": "record",
     "sounds": [
       {
-        "name": "vldm:pigstep_remix",
+        "name": "vlwdm:pigstep_remix",
         "stream": true
       }
     ]
@@ -39,7 +39,7 @@
     "category": "record",
     "sounds": [
       {
-        "name": "vldm:sus",
+        "name": "vlwdm:sus",
         "stream": true
       }
     ]

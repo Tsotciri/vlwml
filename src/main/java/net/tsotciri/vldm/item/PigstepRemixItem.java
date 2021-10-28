@@ -1,7 +1,7 @@
 
 package net.tsotciri.vldm.item;
 
-import net.tsotciri.vldm.VldmModElements;
+import net.tsotciri.vldm.VlwdmModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -11,11 +11,11 @@ import net.minecraft.item.MusicDiscItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 
-@VldmModElements.ModElement.Tag
-public class PigstepRemixItem extends VldmModElements.ModElement {
-	@ObjectHolder("vldm:pigstep_remix")
+@VlwdmModElements.ModElement.Tag
+public class PigstepRemixItem extends VlwdmModElements.ModElement {
+	@ObjectHolder("vlwdm:pigstep_remix")
 	public static final Item block = null;
-	public PigstepRemixItem(VldmModElements instance) {
+	public PigstepRemixItem(VlwdmModElements instance) {
 		super(instance, 5);
 	}
 
@@ -25,7 +25,7 @@ public class PigstepRemixItem extends VldmModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, VldmModElements.sounds.get(new ResourceLocation("vldm:pigstep_remix")),
+			super(0, VlwdmModElements.sounds.get(new ResourceLocation("vlwdm:pigstep_remix")),
 					new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("pigstep_remix");
 		}

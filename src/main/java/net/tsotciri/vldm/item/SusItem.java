@@ -1,7 +1,7 @@
 
 package net.tsotciri.vldm.item;
 
-import net.tsotciri.vldm.VldmModElements;
+import net.tsotciri.vldm.VlwdmModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -11,11 +11,11 @@ import net.minecraft.item.MusicDiscItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 
-@VldmModElements.ModElement.Tag
-public class SusItem extends VldmModElements.ModElement {
-	@ObjectHolder("vldm:sus")
+@VlwdmModElements.ModElement.Tag
+public class SusItem extends VlwdmModElements.ModElement {
+	@ObjectHolder("vlwdm:sus")
 	public static final Item block = null;
-	public SusItem(VldmModElements instance) {
+	public SusItem(VlwdmModElements instance) {
 		super(instance, 6);
 	}
 
@@ -25,7 +25,7 @@ public class SusItem extends VldmModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, VldmModElements.sounds.get(new ResourceLocation("vldm:sus")),
+			super(0, VlwdmModElements.sounds.get(new ResourceLocation("vlwdm:sus")),
 					new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("sus");
 		}

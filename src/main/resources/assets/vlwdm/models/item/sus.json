@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "vldm:items/music_disc_shulk"
+    "layer0": "vlwdm:items/music_disc_sus"
   }
 }

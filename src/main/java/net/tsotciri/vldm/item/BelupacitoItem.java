@@ -2,7 +2,7 @@
 package net.tsotciri.vldm.item;
 
 import net.tsotciri.vldm.procedures.BelupacitoBeatDropProcedure;
-import net.tsotciri.vldm.VldmModElements;
+import net.tsotciri.vldm.VlwdmModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -23,11 +23,11 @@ import net.minecraft.block.BlockState;
 import java.util.Map;
 import java.util.HashMap;
 
-@VldmModElements.ModElement.Tag
-public class BelupacitoItem extends VldmModElements.ModElement {
-	@ObjectHolder("vldm:belupacito")
+@VlwdmModElements.ModElement.Tag
+public class BelupacitoItem extends VlwdmModElements.ModElement {
+	@ObjectHolder("vlwdm:belupacito")
 	public static final Item block = null;
-	public BelupacitoItem(VldmModElements instance) {
+	public BelupacitoItem(VlwdmModElements instance) {
 		super(instance, 3);
 	}
 
@@ -37,7 +37,7 @@ public class BelupacitoItem extends VldmModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, VldmModElements.sounds.get(new ResourceLocation("vldm:belupacito")),
+			super(0, VlwdmModElements.sounds.get(new ResourceLocation("vlwdm:belupacito")),
 					new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("belupacito");
 		}

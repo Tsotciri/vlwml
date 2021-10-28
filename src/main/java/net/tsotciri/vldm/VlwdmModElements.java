@@ -38,35 +38,35 @@ import java.util.ArrayList;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Retention;
 
-public class VldmModElements {
+public class VlwdmModElements {
 	public final List<ModElement> elements = new ArrayList<>();
 	public final List<Supplier<Block>> blocks = new ArrayList<>();
 	public final List<Supplier<Item>> items = new ArrayList<>();
 	public final List<Supplier<EntityType<?>>> entities = new ArrayList<>();
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
-	public VldmModElements() {
-		sounds.put(new ResourceLocation("vldm", "otherside"), new net.minecraft.util.SoundEvent(new ResourceLocation("vldm", "otherside")));
-		sounds.put(new ResourceLocation("vldm", "shulk"), new net.minecraft.util.SoundEvent(new ResourceLocation("vldm", "shulk")));
-		sounds.put(new ResourceLocation("vldm", "belupacito"), new net.minecraft.util.SoundEvent(new ResourceLocation("vldm", "belupacito")));
-		sounds.put(new ResourceLocation("vldm", "pigstep_remix"), new net.minecraft.util.SoundEvent(new ResourceLocation("vldm", "pigstep_remix")));
-		sounds.put(new ResourceLocation("vldm", "sus"), new net.minecraft.util.SoundEvent(new ResourceLocation("vldm", "sus")));
+	public VlwdmModElements() {
+		sounds.put(new ResourceLocation("vlwdm", "otherside"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "otherside")));
+		sounds.put(new ResourceLocation("vlwdm", "shulk"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "shulk")));
+		sounds.put(new ResourceLocation("vlwdm", "belupacito"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "belupacito")));
+		sounds.put(new ResourceLocation("vlwdm", "pigstep_remix"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "pigstep_remix")));
+		sounds.put(new ResourceLocation("vlwdm", "sus"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "sus")));
 		try {
-			ModFileScanData modFileInfo = ModList.get().getModFileById("vldm").getFile().getScanResult();
+			ModFileScanData modFileInfo = ModList.get().getModFileById("vlwdm").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
 			for (ModFileScanData.AnnotationData annotationData : annotations) {
 				if (annotationData.getAnnotationType().getClassName().equals(ModElement.Tag.class.getName())) {
 					Class<?> clazz = Class.forName(annotationData.getClassType().getClassName());
-					if (clazz.getSuperclass() == VldmModElements.ModElement.class)
-						elements.add((VldmModElements.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
+					if (clazz.getSuperclass() == VlwdmModElements.ModElement.class)
+						elements.add((VlwdmModElements.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		Collections.sort(elements);
-		elements.forEach(VldmModElements.ModElement::initElements);
-		MinecraftForge.EVENT_BUS.register(new VldmModVariables(this));
+		elements.forEach(VlwdmModElements.ModElement::initElements);
+		MinecraftForge.EVENT_BUS.register(new VlwdmModVariables(this));
 	}
 
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
@@ -76,7 +76,7 @@ public class VldmModElements {
 	private int messageID = 0;
 	public <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, PacketBuffer> encoder, Function<PacketBuffer, T> decoder,
 			BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
-		VldmMod.PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
+		VlwdmMod.PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
 		messageID++;
 	}
 
@@ -103,9 +103,9 @@ public class VldmModElements {
 		@Retention(RetentionPolicy.RUNTIME)
 		public @interface Tag {
 		}
-		protected final VldmModElements elements;
+		protected final VlwdmModElements elements;
 		protected final int sortid;
-		public ModElement(VldmModElements elements, int sortid) {
+		public ModElement(VlwdmModElements elements, int sortid) {
 			this.elements = elements;
 			this.sortid = sortid;
 		}

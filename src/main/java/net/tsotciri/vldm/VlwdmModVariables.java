@@ -16,8 +16,8 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 
 import java.util.function.Supplier;
 
-public class VldmModVariables {
-	public VldmModVariables(VldmModElements elements) {
+public class VlwdmModVariables {
+	public VlwdmModVariables(VlwdmModElements elements) {
 		elements.addNetworkMessage(WorldSavedDataSyncMessage.class, WorldSavedDataSyncMessage::buffer, WorldSavedDataSyncMessage::new,
 				WorldSavedDataSyncMessage::handler);
 	}
@@ -28,10 +28,10 @@ public class VldmModVariables {
 			WorldSavedData mapdata = MapVariables.get(event.getPlayer().world);
 			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
 			if (mapdata != null)
-				VldmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
+				VlwdmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
 						new WorldSavedDataSyncMessage(0, mapdata));
 			if (worlddata != null)
-				VldmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
+				VlwdmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
 						new WorldSavedDataSyncMessage(1, worlddata));
 		}
 	}
@@ -41,12 +41,12 @@ public class VldmModVariables {
 		if (!event.getPlayer().world.isRemote()) {
 			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
 			if (worlddata != null)
-				VldmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
+				VlwdmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
 						new WorldSavedDataSyncMessage(1, worlddata));
 		}
 	}
 	public static class WorldVariables extends WorldSavedData {
-		public static final String DATA_NAME = "vldm_worldvars";
+		public static final String DATA_NAME = "vlwdm_worldvars";
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -67,7 +67,7 @@ public class VldmModVariables {
 		public void syncData(IWorld world) {
 			this.markDirty();
 			if (world instanceof World && !world.isRemote())
-				VldmMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(((World) world)::getDimensionKey),
+				VlwdmMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(((World) world)::getDimensionKey),
 						new WorldSavedDataSyncMessage(1, this));
 		}
 		static WorldVariables clientSide = new WorldVariables();
@@ -81,7 +81,7 @@ public class VldmModVariables {
 	}
 
 	public static class MapVariables extends WorldSavedData {
-		public static final String DATA_NAME = "vldm_mapvars";
+		public static final String DATA_NAME = "vlwdm_mapvars";
 		public double max_player_health = 0;
 		public MapVariables() {
 			super(DATA_NAME);
@@ -105,7 +105,7 @@ public class VldmModVariables {
 		public void syncData(IWorld world) {
 			this.markDirty();
 			if (world instanceof World && !world.isRemote())
-				VldmMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
+				VlwdmMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
 		}
 		static MapVariables clientSide = new MapVariables();
 		public static MapVariables get(IWorld world) {
