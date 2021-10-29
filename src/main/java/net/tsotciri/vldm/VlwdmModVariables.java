@@ -83,6 +83,7 @@ public class VlwdmModVariables {
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "vlwdm_mapvars";
 		public double max_player_health = 0;
+		public String block = "";
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -94,11 +95,13 @@ public class VlwdmModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			max_player_health = nbt.getDouble("max_player_health");
+			block = nbt.getString("block");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putDouble("max_player_health", max_player_health);
+			nbt.putString("block", block);
 			return nbt;
 		}
 
