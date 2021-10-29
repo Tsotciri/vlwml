@@ -51,6 +51,31 @@ public class VlwdmModElements {
 		sounds.put(new ResourceLocation("vlwdm", "belupacito"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "belupacito")));
 		sounds.put(new ResourceLocation("vlwdm", "pigstep_remix"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "pigstep_remix")));
 		sounds.put(new ResourceLocation("vlwdm", "sus"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "sus")));
+		sounds.put(new ResourceLocation("vlwdm", "hobbit.hobbit_ts"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "hobbit.hobbit_ts")));
+		sounds.put(new ResourceLocation("vlwdm", "marvel.avengers_assemble"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "marvel.avengers_assemble")));
+		sounds.put(new ResourceLocation("vlwdm", "marvel.marvel_ot"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "marvel.marvel_ot")));
+		sounds.put(new ResourceLocation("vlwdm", "memes.coffind_meme"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "memes.coffind_meme")));
+		sounds.put(new ResourceLocation("vlwdm", "memes.nyan"), new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "memes.nyan")));
+		sounds.put(new ResourceLocation("vlwdm", "memes.rick_roll"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "memes.rick_roll")));
+		sounds.put(new ResourceLocation("vlwdm", "memes.suniversal"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "memes.suniversal")));
+		sounds.put(new ResourceLocation("vlwdm", "minigames.battle.music"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "minigames.battle.music")));
+		sounds.put(new ResourceLocation("vlwdm", "minigames.tumble.music"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "minigames.tumble.music")));
+		sounds.put(new ResourceLocation("vlwdm", "minigames.glide.music"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "minigames.glide.music")));
+		sounds.put(new ResourceLocation("vlwdm", "songs.avengers_ts"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "songs.avengers_ts")));
+		sounds.put(new ResourceLocation("vlwdm", "songs.universal_ot"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "songs.universal_ot")));
+		sounds.put(new ResourceLocation("vlwdm", "songs.coffind_full"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("vlwdm", "songs.coffind_full")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("vlwdm").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

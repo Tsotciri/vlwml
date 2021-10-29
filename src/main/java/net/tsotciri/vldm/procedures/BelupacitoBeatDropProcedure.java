@@ -11,11 +11,17 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.AgeableEntity;
 
+import java.util.stream.Collectors;
+import java.util.function.Function;
 import java.util.Map;
+import java.util.List;
+import java.util.Comparator;
 
 public class BelupacitoBeatDropProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -73,6 +79,35 @@ public class BelupacitoBeatDropProcedure {
 				}
 
 				private void run() {
+					{
+						List<Entity> _entfound = world
+								.getEntitiesWithinAABB(Entity.class,
+										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+								.stream().sorted(new Object() {
+									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+										return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+									}
+								}.compareDistOf(x, y, z)).collect(Collectors.toList());
+						for (Entity entityiterator : _entfound) {
+							if (((Entity) world.getEntitiesWithinAABB(AgeableEntity.class,
+									new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+									.stream().sorted(new Object() {
+										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+											return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+										}
+									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity) {
+								((LivingEntity) ((Entity) world.getEntitiesWithinAABB(AgeableEntity.class,
+										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+										.stream().sorted(new Object() {
+											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+												return Comparator
+														.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+											}
+										}.compareDistOf(x, y, z)).findFirst().orElse(null)))
+												.attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(), (float) 20);
+							}
+						}
+					}
 					if (entity instanceof LivingEntity) {
 						((LivingEntity) entity).attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(), (float) 20);
 					}

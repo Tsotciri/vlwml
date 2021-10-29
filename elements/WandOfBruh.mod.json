@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "boom_stick",
+    "customModelName": "Normal",
+    "name": "Wand Of Crash",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 0,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 10.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": true,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": true,
+    "damageVsEntity": 50.0,
+    "specialInfo": [
+      "I dere you to right click me..."
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 1,
+    "onRightClickedOnBlock": {
+      "name": "WandOfBruhEntitySwingsItem"
+    },
+    "hasDispenseBehavior": false
+  }
+}
