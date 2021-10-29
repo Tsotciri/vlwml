@@ -3,7 +3,6 @@ package net.tsotciri.vldm.procedures;
 import net.tsotciri.vldm.VlwdmModVariables;
 import net.tsotciri.vldm.VlwdmMod;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,12 +10,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ChatType;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Util;
 import net.minecraft.util.DamageSource;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -58,11 +53,6 @@ public class BelupacitoBeatDropProcedure {
 				.get(world).block = (String) ((/* @BlockState */(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))) + "" + (""));
 		VlwdmModVariables.MapVariables.get(world).syncData(world);
 		if (((VlwdmModVariables.MapVariables.get(world).block).equals("Block{minecraft:jukebox}[has_record=false]"))) {
-			if (!world.isRemote()) {
-				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (mcserv != null)
-					mcserv.getPlayerList().func_232641_a_(new StringTextComponent(" R U N"), ChatType.SYSTEM, Util.DUMMY_UUID);
-			}
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -168,18 +158,6 @@ public class BelupacitoBeatDropProcedure {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) 243);
-		} else {
-			if (!world.isRemote()) {
-				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (mcserv != null)
-					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("not a juke box lol"), ChatType.SYSTEM, Util.DUMMY_UUID);
-			}
-			if (!world.isRemote()) {
-				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (mcserv != null)
-					mcserv.getPlayerList().func_232641_a_(new StringTextComponent(VlwdmModVariables.MapVariables.get(world).block), ChatType.SYSTEM,
-							Util.DUMMY_UUID);
-			}
 		}
 	}
 }
