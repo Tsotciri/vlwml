@@ -1,0 +1,380 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Otherside",
+      "type": "musicdisc",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "otherside"
+    },
+    {
+      "name": "Shulk",
+      "type": "musicdisc",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shulk"
+    },
+    {
+      "name": "Belupacito",
+      "type": "musicdisc",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito"
+    },
+    {
+      "name": "BelupacitoBeatDrop",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito_beat_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PigstepRemix",
+      "type": "musicdisc",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pigstep_remix"
+    },
+    {
+      "name": "Sus",
+      "type": "musicdisc",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sus"
+    },
+    {
+      "name": "WandOfBruhEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wand_of_bruh_entity_swings_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WandOfBruh",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wand_of_bruh"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "max_player_health",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "block",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "entity",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "zdir",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "xdir",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "otherside",
+      "files": [
+        "otherdisde"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "shulk",
+      "files": [
+        "shulk"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "belupacito",
+      "files": [
+        "belupacito"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "pigstep_remix",
+      "files": [
+        "pigstep_remix"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "sus",
+      "files": [
+        "sus"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "hobbit.hobbit_ts",
+      "files": [
+        "hobbit"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "marvel.avengers_assemble",
+      "files": [
+        "avengers_asemble"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "marvel.marvel_ot",
+      "files": [
+        "mot"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "memes.coffind_meme",
+      "files": [
+        "coffind_meme"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "memes.nyan",
+      "files": [
+        "nyan"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "memes.rick_roll",
+      "files": [
+        "rick_roll"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "memes.suniversal",
+      "files": [
+        "suniversal"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "minigames.battle.music",
+      "files": [
+        "battle1",
+        "battle2",
+        "battle3"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "minigames.tumble.music",
+      "files": [
+        "tumble1",
+        "tumble2",
+        "tumble3"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "minigames.glide.music",
+      "files": [
+        "glide1",
+        "glide2",
+        "glide3"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "songs.avengers_ts",
+      "files": [
+        "avengers_full"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "songs.universal_ot",
+      "files": [
+        "universal_full"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "songs.coffind_full",
+      "files": [
+        "coffind_full"
+      ],
+      "category": "music",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.vlwml.belupacito": "Music disc",
+      "subtitles.memes.coffind_meme": "",
+      "item.vlwdm.belupacito.desc": "Beluga - Belupacito",
+      "item.vlwml.sus.desc": "u sus",
+      "item.vlwdm.pigstep_remix": "Music Disc",
+      "subtitles.belupacito": "",
+      "subtitles.marvel.avengers_assemble": "",
+      "item.vlwdm.shulk.desc": "JamiesName - Shulk",
+      "item.vldm.otherside.desc": "Lena Raine - Otherside",
+      "subtitles.otherside": "",
+      "item.vldm.otherside": "Music disc",
+      "item.vlwml.belupacito.desc": "Beluga - Belupacito",
+      "subtitles.minigames.battle.music": "",
+      "item.vldm.shulk": "Music disc",
+      "item.vldm.sus": "Sus",
+      "subtitles.memes.suniversal": "",
+      "item.vlwdm.sus.desc": "u sus",
+      "subtitles.songs.coffind_full": "",
+      "item.vlwdm.otherside": "Music disc",
+      "item.vlwdm.otherside.desc": "Lena Raine - Otherside",
+      "subtitles.shulk": "",
+      "item.vldm.pigstep_remix": "Music Disc",
+      "item.vlwml.sus": "Sus",
+      "item.vlwml.pigstep_remix": "Music Disc",
+      "subtitles.hobbit.hobbit_ts": "",
+      "subtitles.memes.nyan": "",
+      "item.vlwdm.belupacito": "Music disc",
+      "item.vldm.belupacito.desc": "Beluga - Belupacito",
+      "death.attack.beatdrop": "%1$s Eardrums were erupted, along with their head",
+      "item.vlwml.otherside": "Music disc",
+      "item.vlwml.otherside.desc": "Lena Raine - Otherside",
+      "item.vldm.belupacito": "Music disc",
+      "item.vlwdm.sus": "Sus",
+      "subtitles.sus": "",
+      "item.vlwml.shulk.desc": "JamiesName - Shulk",
+      "item.vlwml.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
+      "subtitles.minigames.glide.music": "",
+      "item.vlwml.shulk": "Music disc",
+      "subtitles.marvel.marvel_ot": "",
+      "subtitles.minigames.tumble.music": "",
+      "subtitles.songs.avengers_ts": "",
+      "subtitles.pigstep_remix": "",
+      "item.vlwdm.shulk": "Music disc",
+      "item.vldm.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
+      "item.vldm.sus.desc": "u sus",
+      "item.vlwdm.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
+      "subtitles.songs.universal_ot": "",
+      "item.vlwml.wand_of_bruh": "Wand Of Crash",
+      "item.vldm.shulk.desc": "JamiesName - Shulk",
+      "subtitles.memes.rick_roll": "",
+      "item.vlwdm.wand_of_bruh": "Wand Of Crash"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "vlwml",
+    "modName": "VillageWars Music Liblary",
+    "version": "Beta 1.0.0",
+    "description": "This is the VillageWars Music Liblary an addon to the VLWDM (VillageWars Dedicated Mod)       ",
+    "author": "Tsotciri",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "This mod was Created using MCreator (https://mcreator.net/about)",
+    "modElementsPackage": "net.tsotciri.vlml",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100236710
+}

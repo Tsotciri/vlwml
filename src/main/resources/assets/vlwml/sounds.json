@@ -1,0 +1,188 @@
+{
+  "otherside": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:otherdisde",
+        "stream": true
+      }
+    ]
+  },
+  "shulk": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:shulk",
+        "stream": true
+      }
+    ]
+  },
+  "belupacito": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:belupacito",
+        "stream": true
+      }
+    ]
+  },
+  "pigstep_remix": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:pigstep_remix",
+        "stream": true
+      }
+    ]
+  },
+  "sus": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:sus",
+        "stream": true
+      }
+    ]
+  },
+  "hobbit.hobbit_ts": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:hobbit",
+        "stream": true
+      }
+    ]
+  },
+  "marvel.avengers_assemble": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:avengers_asemble",
+        "stream": true
+      }
+    ]
+  },
+  "marvel.marvel_ot": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:mot",
+        "stream": true
+      }
+    ]
+  },
+  "memes.coffind_meme": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:coffind_meme",
+        "stream": true
+      }
+    ]
+  },
+  "memes.nyan": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:nyan",
+        "stream": true
+      }
+    ]
+  },
+  "memes.rick_roll": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:rick_roll",
+        "stream": true
+      }
+    ]
+  },
+  "memes.suniversal": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:suniversal",
+        "stream": true
+      }
+    ]
+  },
+  "minigames.battle.music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:battle1",
+        "stream": true
+      },
+      {
+        "name": "vlwml:battle2",
+        "stream": true
+      },
+      {
+        "name": "vlwml:battle3",
+        "stream": true
+      }
+    ]
+  },
+  "minigames.tumble.music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:tumble1",
+        "stream": true
+      },
+      {
+        "name": "vlwml:tumble2",
+        "stream": true
+      },
+      {
+        "name": "vlwml:tumble3",
+        "stream": true
+      }
+    ]
+  },
+  "minigames.glide.music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:glide1",
+        "stream": true
+      },
+      {
+        "name": "vlwml:glide2",
+        "stream": true
+      },
+      {
+        "name": "vlwml:glide3",
+        "stream": true
+      }
+    ]
+  },
+  "songs.avengers_ts": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:avengers_full",
+        "stream": true
+      }
+    ]
+  },
+  "songs.universal_ot": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:universal_full",
+        "stream": true
+      }
+    ]
+  },
+  "songs.coffind_full": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:coffind_full",
+        "stream": true
+      }
+    ]
+  }
+}

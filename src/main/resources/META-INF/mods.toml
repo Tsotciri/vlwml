@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="vlwdm"
+modId="vlwml"
 version="Beta 1.0.0"
 displayName="VillageWars Music Liblary"
 credits="This mod was Created using MCreator (https://mcreator.net/about)"
@@ -13,7 +13,7 @@ description='''
 This is the VillageWars Music Liblary an addon to the VLWDM (VillageWars Dedicated Mod)       
 '''
 
-[[dependencies.vlwdm]]
+[[dependencies.vlwml]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"
