@@ -1,22 +1,4 @@
 {
-  "otherside": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "vlwml:otherdisde",
-        "stream": true
-      }
-    ]
-  },
-  "shulk": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "vlwml:shulk",
-        "stream": true
-      }
-    ]
-  },
   "belupacito": {
     "category": "record",
     "sounds": [
@@ -181,6 +163,60 @@
     "sounds": [
       {
         "name": "vlwml:coffind_full",
+        "stream": true
+      }
+    ]
+  },
+  "shulk": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:shulk",
+        "stream": true
+      }
+    ]
+  },
+  "otherside": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "vlwml:otherdisde",
+        "stream": true
+      }
+    ]
+  },
+  "tuber.craniac": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:craniac",
+        "stream": true
+      }
+    ]
+  },
+  "tuber.congrats": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:congrats",
+        "stream": true
+      }
+    ]
+  },
+  "songs.megalovania": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:megalovania",
+        "stream": true
+      }
+    ]
+  },
+  "songs.veratasium": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "vlwml:veritasium",
         "stream": true
       }
     ]

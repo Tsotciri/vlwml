@@ -1,21 +1,19 @@
-package net.tsotciri.vlml.procedures;
+package net.tsotciri.vlwml.procedures;
 
-import net.tsotciri.vlml.VlwmlModVariables;
-import net.tsotciri.vlml.VlwmlMod;
+import net.tsotciri.vlwml.VlwmlModVariables;
+import net.tsotciri.vlwml.VlwmlMod;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ChatType;
+import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.Util;
 import net.minecraft.util.DamageSource;
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.entity.passive.AmbientEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.AgeableEntity;
@@ -90,55 +88,68 @@ public class BelupacitoBeatDropProcedure {
 									}
 								}.compareDistOf(x, y, z)).collect(Collectors.toList());
 						for (Entity entityiterator : _entfound) {
-							VlwmlModVariables.MapVariables.get(world).xdir = (double) (VlwmlModVariables.MapVariables.get(world).xdir + 1);
-							VlwmlModVariables.MapVariables.get(world).syncData(world);
-							VlwmlModVariables.MapVariables.get(world).zdir = (double) (VlwmlModVariables.MapVariables.get(world).zdir + 1);
-							VlwmlModVariables.MapVariables.get(world).syncData(world);
-							if (!world.isRemote()) {
-								MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-								if (mcserv != null)
-									mcserv.getPlayerList().func_232641_a_(
-											new StringTextComponent(((VlwmlModVariables.MapVariables.get(world).xdir) + "" + (null))),
-											ChatType.SYSTEM, Util.DUMMY_UUID);
-							}
-							if (!world.isRemote()) {
-								MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-								if (mcserv != null)
-									mcserv.getPlayerList().func_232641_a_(
-											new StringTextComponent(((VlwmlModVariables.MapVariables.get(world).zdir) + "" + (null))),
-											ChatType.SYSTEM, Util.DUMMY_UUID);
-							}
 							if (((Entity) world.getEntitiesWithinAABB(AgeableEntity.class,
-									new AxisAlignedBB(VlwmlModVariables.MapVariables.get(world).xdir - (4 / 2d), y - (4 / 2d),
-											VlwmlModVariables.MapVariables.get(world).zdir - (4 / 2d),
-											VlwmlModVariables.MapVariables.get(world).xdir + (4 / 2d), y + (4 / 2d),
-											VlwmlModVariables.MapVariables.get(world).zdir + (4 / 2d)),
-									null).stream().sorted(new Object() {
+									new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+									.stream().sorted(new Object() {
 										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 											return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 										}
-									}.compareDistOf(VlwmlModVariables.MapVariables.get(world).xdir, y,
-											VlwmlModVariables.MapVariables.get(world).zdir))
-									.findFirst().orElse(null)) instanceof LivingEntity) {
-								((LivingEntity) ((Entity) world
-										.getEntitiesWithinAABB(AgeableEntity.class,
-												new AxisAlignedBB(VlwmlModVariables.MapVariables.get(world).xdir - (4 / 2d), y - (4 / 2d),
-														VlwmlModVariables.MapVariables.get(world).zdir - (4 / 2d),
-														VlwmlModVariables.MapVariables.get(world).xdir + (4 / 2d), y + (4 / 2d),
-														VlwmlModVariables.MapVariables.get(world).zdir + (4 / 2d)),
-												null)
+									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity) {
+								((LivingEntity) ((Entity) world.getEntitiesWithinAABB(AgeableEntity.class,
+										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
 										.stream().sorted(new Object() {
 											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 												return Comparator
 														.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 											}
-										}.compareDistOf(VlwmlModVariables.MapVariables.get(world).xdir, y,
-												VlwmlModVariables.MapVariables.get(world).zdir))
-										.findFirst().orElse(null))).attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(),
-												(float) 20);
+										}.compareDistOf(x, y, z)).findFirst().orElse(null)))
+												.attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(), (float) 100);
+							}
+							if (((Entity) world.getEntitiesWithinAABB(AmbientEntity.class,
+									new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+									.stream().sorted(new Object() {
+										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+											return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+										}
+									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity) {
+								((LivingEntity) ((Entity) world.getEntitiesWithinAABB(AmbientEntity.class,
+										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+										.stream().sorted(new Object() {
+											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+												return Comparator
+														.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+											}
+										}.compareDistOf(x, y, z)).findFirst().orElse(null)))
+												.attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(), (float) 100);
 							}
 						}
 					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !((World) world).isRemote) {
+								((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 10, Explosion.Mode.BREAK);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) 243);

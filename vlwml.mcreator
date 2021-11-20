@@ -56,62 +56,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "PigstepRemix",
-      "type": "musicdisc",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pigstep_remix"
-    },
-    {
-      "name": "Sus",
-      "type": "musicdisc",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sus"
-    },
-    {
-      "name": "WandOfBruhEntitySwingsItem",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "wand_of_bruh_entity_swings_item",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "WandOfBruh",
-      "type": "item",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "wand_of_bruh"
     }
   ],
   "variable_elements": [
@@ -147,22 +91,6 @@
     }
   ],
   "sound_elements": [
-    {
-      "name": "otherside",
-      "files": [
-        "otherdisde"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
-      "name": "shulk",
-      "files": [
-        "shulk"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
     {
       "name": "belupacito",
       "files": [
@@ -296,6 +224,54 @@
       ],
       "category": "music",
       "subtitle": ""
+    },
+    {
+      "name": "shulk",
+      "files": [
+        "shulk"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "otherside",
+      "files": [
+        "otherdisde"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "tuber.craniac",
+      "files": [
+        "craniac"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "tuber.congrats",
+      "files": [
+        "congrats"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "songs.megalovania",
+      "files": [
+        "megalovania"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "songs.veratasium",
+      "files": [
+        "veritasium"
+      ],
+      "category": "music",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -303,13 +279,15 @@
       "item.vlwml.belupacito": "Music disc",
       "subtitles.memes.coffind_meme": "",
       "item.vlwdm.belupacito.desc": "Beluga - Belupacito",
-      "item.vlwml.sus.desc": "u sus",
       "item.vlwdm.pigstep_remix": "Music Disc",
+      "subtitles.tuber.congrats": "",
       "subtitles.belupacito": "",
       "subtitles.marvel.avengers_assemble": "",
+      "subtitles.tuber.craniac": "",
       "item.vlwdm.shulk.desc": "JamiesName - Shulk",
-      "item.vldm.otherside.desc": "Lena Raine - Otherside",
+      "subtitles.songs.megalovania": "",
       "subtitles.otherside": "",
+      "item.vldm.otherside.desc": "Lena Raine - Otherside",
       "item.vldm.otherside": "Music disc",
       "item.vlwml.belupacito.desc": "Beluga - Belupacito",
       "subtitles.minigames.battle.music": "",
@@ -322,8 +300,6 @@
       "item.vlwdm.otherside.desc": "Lena Raine - Otherside",
       "subtitles.shulk": "",
       "item.vldm.pigstep_remix": "Music Disc",
-      "item.vlwml.sus": "Sus",
-      "item.vlwml.pigstep_remix": "Music Disc",
       "subtitles.hobbit.hobbit_ts": "",
       "subtitles.memes.nyan": "",
       "item.vlwdm.belupacito": "Music disc",
@@ -335,7 +311,6 @@
       "item.vlwdm.sus": "Sus",
       "subtitles.sus": "",
       "item.vlwml.shulk.desc": "JamiesName - Shulk",
-      "item.vlwml.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
       "subtitles.minigames.glide.music": "",
       "item.vlwml.shulk": "Music disc",
       "subtitles.marvel.marvel_ot": "",
@@ -347,7 +322,7 @@
       "item.vldm.sus.desc": "u sus",
       "item.vlwdm.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
       "subtitles.songs.universal_ot": "",
-      "item.vlwml.wand_of_bruh": "Wand Of Crash",
+      "subtitles.songs.veratasium": "",
       "item.vldm.shulk.desc": "JamiesName - Shulk",
       "subtitles.memes.rick_roll": "",
       "item.vlwdm.wand_of_bruh": "Wand Of Crash"
@@ -359,21 +334,22 @@
   },
   "workspaceSettings": {
     "modid": "vlwml",
-    "modName": "VillageWars Music Liblary",
-    "version": "Beta 1.0.0",
-    "description": "This is the VillageWars Music Liblary an addon to the VLWDM (VillageWars Dedicated Mod)       ",
+    "modName": "VillageWars Music Library",
+    "version": "Beta 1.1.0",
+    "description": "This is the VillageWars Music Library an addon to the VLWDM (VillageWars Dedicated Mod)       ",
     "author": "Tsotciri",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "otherside_icon",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "This mod was Created using MCreator (https://mcreator.net/about)",
-    "modElementsPackage": "net.tsotciri.vlml",
+    "credits": "This mod was Created using MCreator",
+    "modElementsPackage": "net.tsotciri.vlwml",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202100236710

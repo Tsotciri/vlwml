@@ -1,4 +1,4 @@
-package net.tsotciri.vlml;
+package net.tsotciri.vlwml;
 
 import net.minecraftforge.fml.network.PacketDistributor;
 import net.minecraftforge.fml.network.NetworkEvent;

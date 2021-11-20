@@ -15,7 +15,7 @@
  *    will be REGENERATED on each build.
  *
  */
-package net.tsotciri.vlml;
+package net.tsotciri.vlwml;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;

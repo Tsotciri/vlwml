@@ -6,7 +6,7 @@
     "name": "Music disc",
     "description": "Beluga - Belupacito",
     "creativeTab": {
-      "value": "MISC"
+      "value": "No creative tab entry"
     },
     "music": {
       "value": "CUSTOM:belupacito"

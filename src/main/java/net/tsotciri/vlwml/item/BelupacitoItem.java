@@ -1,8 +1,8 @@
 
-package net.tsotciri.vlml.item;
+package net.tsotciri.vlwml.item;
 
-import net.tsotciri.vlml.procedures.BelupacitoBeatDropProcedure;
-import net.tsotciri.vlml.VlwmlModElements;
+import net.tsotciri.vlwml.procedures.BelupacitoBeatDropProcedure;
+import net.tsotciri.vlwml.VlwmlModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -15,7 +15,6 @@ import net.minecraft.item.Rarity;
 import net.minecraft.item.MusicDiscItem;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
@@ -38,7 +37,7 @@ public class BelupacitoItem extends VlwmlModElements.ModElement {
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
 			super(0, VlwmlModElements.sounds.get(new ResourceLocation("vlwml:belupacito")),
-					new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
+					new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("belupacito");
 		}
 
@@ -56,7 +55,6 @@ public class BelupacitoItem extends VlwmlModElements.ModElement {
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

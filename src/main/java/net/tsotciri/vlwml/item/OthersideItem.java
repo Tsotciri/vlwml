@@ -1,7 +1,7 @@
 
-package net.tsotciri.vlml.item;
+package net.tsotciri.vlwml.item;
 
-import net.tsotciri.vlml.VlwmlModElements;
+import net.tsotciri.vlwml.VlwmlModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 

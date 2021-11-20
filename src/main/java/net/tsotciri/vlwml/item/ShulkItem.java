@@ -1,7 +1,7 @@
 
-package net.tsotciri.vlml.item;
+package net.tsotciri.vlwml.item;
 
-import net.tsotciri.vlml.VlwmlModElements;
+import net.tsotciri.vlwml.VlwmlModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -12,11 +12,11 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 
 @VlwmlModElements.ModElement.Tag
-public class SusItem extends VlwmlModElements.ModElement {
-	@ObjectHolder("vlwml:sus")
+public class ShulkItem extends VlwmlModElements.ModElement {
+	@ObjectHolder("vlwml:shulk")
 	public static final Item block = null;
-	public SusItem(VlwmlModElements instance) {
-		super(instance, 6);
+	public ShulkItem(VlwmlModElements instance) {
+		super(instance, 2);
 	}
 
 	@Override
@@ -25,9 +25,9 @@ public class SusItem extends VlwmlModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, VlwmlModElements.sounds.get(new ResourceLocation("vlwml:sus")),
+			super(0, VlwmlModElements.sounds.get(new ResourceLocation("vlwml:shulk")),
 					new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
-			setRegistryName("sus");
+			setRegistryName("shulk");
 		}
 	}
 }
