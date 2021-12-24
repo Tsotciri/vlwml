@@ -1,0 +1,9 @@
+{
+  "_fv": 24,
+  "_type": "function",
+  "definition": {
+    "code": "/say eee",
+    "name": "belupacito_beat_drop_func_extra",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_fv": 24,
+  "_type": "function",
+  "definition": {
+    "code": "summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,CustomName:'{\"text\":\"south\"}'}\nsummon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Rotation:[90f],CustomName:'{\"text\":\"west\"}'}\nsummon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Rotation:[180f],CustomName:'{\"text\":\"north\"}'}\nsummon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Rotation:[270f],CustomName:'{\"text\":\"east\"}',Pose:{Head:[92f,0f,0f]}}\nfunction vlwml:belupacito_beat_drop_func_extra",
+    "name": "belupacito_beat_drop_func",
+    "namespace": "mod"
+  }
+}

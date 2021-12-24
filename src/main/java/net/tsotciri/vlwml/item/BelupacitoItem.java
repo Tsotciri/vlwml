@@ -2,66 +2,27 @@
 package net.tsotciri.vlwml.item;
 
 import net.tsotciri.vlwml.procedures.BelupacitoBeatDropProcedure;
-import net.tsotciri.vlwml.VlwmlModElements;
+import net.tsotciri.vlwml.init.VlwmlModSounds;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.RecordItem;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.resources.ResourceLocation;
 
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.MusicDiscItem;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.block.BlockState;
-
-import java.util.Map;
-import java.util.HashMap;
-
-@VlwmlModElements.ModElement.Tag
-public class BelupacitoItem extends VlwmlModElements.ModElement {
-	@ObjectHolder("vlwml:belupacito")
-	public static final Item block = null;
-	public BelupacitoItem(VlwmlModElements instance) {
-		super(instance, 3);
+public class BelupacitoItem extends RecordItem {
+	public BelupacitoItem() {
+		super(0, VlwmlModSounds.REGISTRY.get(new ResourceLocation("vlwml:belupacito")),
+				new Item.Properties().tab(null).stacksTo(1).rarity(Rarity.RARE));
+		setRegistryName("belupacito");
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new MusicDiscItemCustom());
-	}
-	public static class MusicDiscItemCustom extends MusicDiscItem {
-		public MusicDiscItemCustom() {
-			super(0, VlwmlModElements.sounds.get(new ResourceLocation("vlwml:belupacito")),
-					new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.RARE));
-			setRegistryName("belupacito");
-		}
-
-		@Override
-		public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
-			ActionResultType retval = super.onItemUseFirst(stack, context);
-			World world = context.getWorld();
-			BlockPos pos = context.getPos();
-			PlayerEntity entity = context.getPlayer();
-			Direction direction = context.getFace();
-			BlockState blockstate = world.getBlockState(pos);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			ItemStack itemstack = context.getItem();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				BelupacitoBeatDropProcedure.executeProcedure($_dependencies);
-			}
-			return retval;
-		}
+	public InteractionResult useOn(UseOnContext context) {
+		InteractionResult retval = super.useOn(context);
+		BelupacitoBeatDropProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
+				context.getClickedPos().getZ());
+		return retval;
 	}
 }

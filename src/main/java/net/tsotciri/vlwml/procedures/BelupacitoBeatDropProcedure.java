@@ -1,158 +1,110 @@
 package net.tsotciri.vlwml.procedures;
 
-import net.tsotciri.vlwml.VlwmlModVariables;
-import net.tsotciri.vlwml.VlwmlMod;
+import net.tsotciri.vlwml.init.VlwmlModGameRules;
 
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Explosion;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.DamageSource;
-import net.minecraft.entity.passive.AmbientEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.AgeableEntity;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.commands.CommandFunction;
+import net.minecraft.Util;
 
-import java.util.stream.Collectors;
-import java.util.function.Function;
-import java.util.Map;
-import java.util.List;
-import java.util.Comparator;
+import java.util.Optional;
 
 public class BelupacitoBeatDropProcedure {
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				VlwmlMod.LOGGER.warn("Failed to load dependency x for procedure BelupacitoBeatDrop!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				VlwmlMod.LOGGER.warn("Failed to load dependency y for procedure BelupacitoBeatDrop!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				VlwmlMod.LOGGER.warn("Failed to load dependency z for procedure BelupacitoBeatDrop!");
-			return;
-		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				VlwmlMod.LOGGER.warn("Failed to load dependency world for procedure BelupacitoBeatDrop!");
-			return;
-		}
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		VlwmlModVariables.MapVariables
-				.get(world).block = (String) ((/* @BlockState */(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))) + "" + (""));
-		VlwmlModVariables.MapVariables.get(world).syncData(world);
-		if (((VlwmlModVariables.MapVariables.get(world).block).equals("Block{minecraft:jukebox}[has_record=false]"))) {
-			VlwmlModVariables.MapVariables.get(world).xdir = (double) 0;
-			VlwmlModVariables.MapVariables.get(world).syncData(world);
-			VlwmlModVariables.MapVariables.get(world).zdir = (double) 0;
-			VlwmlModVariables.MapVariables.get(world).syncData(world);
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private IWorld world;
-				public void start(IWorld world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
+		if (world.getLevelData().getGameRules().getBoolean(VlwmlModGameRules.DOBELUPACITOBEATDROP) == true) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)) + "").equals("Block{minecraft:jukebox}[has_record=true]")) {
+				if (!world.isClientSide()) {
+					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+					if (mcserv != null)
+						mcserv.getPlayerList().broadcastMessage(new TextComponent("Waiting"), ChatType.SYSTEM, Util.NIL_UUID);
 				}
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private LevelAccessor world;
 
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
+					public void start(LevelAccessor world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
 					}
-				}
 
-				private void run() {
-					{
-						List<Entity> _entfound = world
-								.getEntitiesWithinAABB(Entity.class,
-										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-								.stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)) + "").equals("Block{minecraft:jukebox}[has_record=true]")) {
+							if (!world.isClientSide()) {
+								MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+								if (mcserv != null)
+									mcserv.getPlayerList().broadcastMessage(new TextComponent("Boom"), ChatType.SYSTEM, Util.NIL_UUID);
+							}
+							if (world instanceof ServerLevel _level && _level.getServer() != null) {
+								Optional<CommandFunction> _fopt = _level.getServer().getFunctions()
+										.get(new ResourceLocation("vlwml:belupacito_beat_drop_func"));
+								if (_fopt.isPresent())
+									_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL,
+											new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null));
+							}
+							new Object() {
+								private int ticks = 0;
+								private float waitTicks;
+								private LevelAccessor world;
+
+								public void start(LevelAccessor world, int waitTicks) {
+									this.waitTicks = waitTicks;
+									MinecraftForge.EVENT_BUS.register(this);
+									this.world = world;
+								}
+
+								@SubscribeEvent
+								public void tick(TickEvent.ServerTickEvent event) {
+									if (event.phase == TickEvent.Phase.END) {
+										this.ticks += 1;
+										if (this.ticks >= this.waitTicks)
+											run();
 									}
-								}.compareDistOf(x, y, z)).collect(Collectors.toList());
-						for (Entity entityiterator : _entfound) {
-							if (((Entity) world.getEntitiesWithinAABB(AgeableEntity.class,
-									new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-									.stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity) {
-								((LivingEntity) ((Entity) world.getEntitiesWithinAABB(AgeableEntity.class,
-										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-										.stream().sorted(new Object() {
-											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-												return Comparator
-														.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-											}
-										}.compareDistOf(x, y, z)).findFirst().orElse(null)))
-												.attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(), (float) 100);
-							}
-							if (((Entity) world.getEntitiesWithinAABB(AmbientEntity.class,
-									new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-									.stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity) {
-								((LivingEntity) ((Entity) world.getEntitiesWithinAABB(AmbientEntity.class,
-										new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-										.stream().sorted(new Object() {
-											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-												return Comparator
-														.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-											}
-										}.compareDistOf(x, y, z)).findFirst().orElse(null)))
-												.attackEntityFrom(new DamageSource("beatdrop").setDamageBypassesArmor(), (float) 100);
+								}
+
+								private void run() {
+									if (world instanceof Level _level && !_level.isClientSide())
+										_level.explode(null, x, y, z, 10, Explosion.BlockInteraction.BREAK);
+									MinecraftForge.EVENT_BUS.unregister(this);
+								}
+							}.start(world, 10);
+						} else {
+							if (!world.isClientSide()) {
+								MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+								if (mcserv != null)
+									mcserv.getPlayerList().broadcastMessage(new TextComponent("No block lol"), ChatType.SYSTEM, Util.NIL_UUID);
 							}
 						}
+						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private IWorld world;
-						public void start(IWorld world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							if (world instanceof World && !((World) world).isRemote) {
-								((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 10, Explosion.Mode.BREAK);
-							}
-							MinecraftForge.EVENT_BUS.unregister(this);
-						}
-					}.start(world, (int) 10);
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, (int) 243);
+				}.start(world, 243);
+			}
 		}
 	}
 }

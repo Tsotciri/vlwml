@@ -56,6 +56,36 @@
           }
         ]
       }
+    },
+    {
+      "name": "BelupacitoBeatDropFunc",
+      "type": "function",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito_beat_drop_func"
+    },
+    {
+      "name": "BelupacitoBeatDropFuncExtra",
+      "type": "function",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito_beat_drop_func_extra"
+    },
+    {
+      "name": "DoBelupacitoBeatdrop",
+      "type": "gamerule",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "doBelupacitoBeatdrop",
+      "metadata": {
+        "type": "logic"
+      }
     }
   ],
   "variable_elements": [
@@ -64,12 +94,6 @@
       "type": "number",
       "scope": "map",
       "value": "0"
-    },
-    {
-      "name": "block",
-      "type": "string",
-      "scope": "map",
-      "value": ""
     },
     {
       "name": "entity",
@@ -291,6 +315,7 @@
       "item.vlwml.belupacito.desc": "Beluga - Belupacito",
       "item.vldm.otherside": "Music disc",
       "subtitles.minigames.battle.music": "",
+      "gamerule.doBelupacitoBeatdrop": "Do Belupacito Beatdrop",
       "item.vldm.shulk": "Music disc",
       "item.vldm.sus": "Sus",
       "subtitles.memes.suniversal": "",
@@ -304,7 +329,7 @@
       "subtitles.memes.nyan": "",
       "item.vlwdm.belupacito": "Music disc",
       "item.vldm.belupacito.desc": "Beluga - Belupacito",
-      "death.attack.beatdrop": "%1$s Eardrums were erupted, along with their head",
+      "death.attack.beatdrop": "%1$s\\\u0027 Eardrums were erupted, along with their head",
       "item.vlwml.otherside": "Music disc",
       "item.vlwml.otherside.desc": "Lena Raine - Otherside",
       "item.vldm.belupacito": "Music disc",
@@ -319,6 +344,7 @@
       "subtitles.pigstep_remix": "",
       "item.vlwdm.shulk": "Music disc",
       "item.vldm.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
+      "gamerule.doBelupacitoBeatdrop.description": "This gamerule defines if The Belupacito Music Disc will do a deadly deadly beatdrop",
       "item.vldm.sus.desc": "u sus",
       "item.vlwdm.pigstep_remix.desc": "Scott Buckley - Pigstep Remix",
       "subtitles.songs.universal_ot": "",
@@ -335,10 +361,10 @@
   "workspaceSettings": {
     "modid": "vlwml",
     "modName": "VillageWars Music Library",
-    "version": "Beta 1.1.0",
+    "version": "1.1.0-beta",
     "description": "This is the VillageWars Music Library an addon to the VLWDM (VillageWars Dedicated Mod)       ",
     "author": "Tsotciri",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://youtube.com",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -347,10 +373,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.16.5",
-    "credits": "This mod was Created using MCreator",
+    "currentGenerator": "forge-1.17.1",
+    "credits": "This mod was Created using MCreator (https://mcreator.net)",
     "modElementsPackage": "net.tsotciri.vlwml",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100236710
+  "mcreatorVersion": 202100351610
 }

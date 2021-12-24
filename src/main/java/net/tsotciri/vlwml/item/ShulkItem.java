@@ -1,33 +1,18 @@
 
 package net.tsotciri.vlwml.item;
 
-import net.tsotciri.vlwml.VlwmlModElements;
+import net.tsotciri.vlwml.init.VlwmlModSounds;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.RecordItem;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.resources.ResourceLocation;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.MusicDiscItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-
-@VlwmlModElements.ModElement.Tag
-public class ShulkItem extends VlwmlModElements.ModElement {
-	@ObjectHolder("vlwml:shulk")
-	public static final Item block = null;
-	public ShulkItem(VlwmlModElements instance) {
-		super(instance, 2);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new MusicDiscItemCustom());
-	}
-	public static class MusicDiscItemCustom extends MusicDiscItem {
-		public MusicDiscItemCustom() {
-			super(0, VlwmlModElements.sounds.get(new ResourceLocation("vlwml:shulk")),
-					new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
-			setRegistryName("shulk");
-		}
+public class ShulkItem extends RecordItem {
+	public ShulkItem() {
+		super(0, VlwmlModSounds.REGISTRY.get(new ResourceLocation("vlwml:shulk")),
+				new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).rarity(Rarity.RARE));
+		setRegistryName("shulk");
 	}
 }

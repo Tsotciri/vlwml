@@ -1,13 +1,13 @@
 modLoader="javafml"
-loaderVersion="[36,)"
+loaderVersion="[37,)"
 license="Academic Free License v3.0"
 
 [[mods]]
 modId="vlwml"
-version="Beta 1.1.0"
+version="1.1.0-beta"
 displayName="VillageWars Music Library"
-credits="This mod was Created using MCreator"
-displayURL="https://mcreator.net"
+credits="This mod was Created using MCreator (https://mcreator.net)"
+displayURL="https://youtube.com"
 logoFile="logo.png"
 authors="Tsotciri"
 description='''
@@ -17,7 +17,7 @@ This is the VillageWars Music Library an addon to the VLWDM (VillageWars Dedicat
 [[dependencies.vlwml]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.17.1]"
     ordering="NONE"
     side="BOTH"
 
