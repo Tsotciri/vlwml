@@ -10,8 +10,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
@@ -68,32 +66,15 @@ public class BelupacitoBeatDropProcedure {
 									_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL,
 											new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null));
 							}
-							new Object() {
-								private int ticks = 0;
-								private float waitTicks;
-								private LevelAccessor world;
-
-								public void start(LevelAccessor world, int waitTicks) {
-									this.waitTicks = waitTicks;
-									MinecraftForge.EVENT_BUS.register(this);
-									this.world = world;
+							for (int index0 = 0; index0 < (int) (100); index0++) {
+								if (world instanceof ServerLevel _level && _level.getServer() != null) {
+									Optional<CommandFunction> _fopt = _level.getServer().getFunctions()
+											.get(new ResourceLocation("vlwml:belupacito_beat_drop_func_extra"));
+									if (_fopt.isPresent())
+										_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL,
+												new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null));
 								}
-
-								@SubscribeEvent
-								public void tick(TickEvent.ServerTickEvent event) {
-									if (event.phase == TickEvent.Phase.END) {
-										this.ticks += 1;
-										if (this.ticks >= this.waitTicks)
-											run();
-									}
-								}
-
-								private void run() {
-									if (world instanceof Level _level && !_level.isClientSide())
-										_level.explode(null, x, y, z, 10, Explosion.BlockInteraction.BREAK);
-									MinecraftForge.EVENT_BUS.unregister(this);
-								}
-							}.start(world, 10);
+							}
 						} else {
 							if (!world.isClientSide()) {
 								MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();

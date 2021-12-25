@@ -1,0 +1,263 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.GLASS"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#0"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#1"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#2"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#3"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#4"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#5"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#6"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#7"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#8"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#9"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#10"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#11"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#12"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#13"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#14"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS#15"
+      },
+      {
+        "value": "Blocks.GLASS_PANE"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#0"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#1"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#2"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#3"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#4"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#5"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#6"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#7"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#8"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#9"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#10"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#11"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#12"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#13"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#14"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#15"
+      },
+      {
+        "value": "Blocks.TALLGRASS"
+      },
+      {
+        "value": "Blocks.TALLGRASS#0"
+      },
+      {
+        "value": "Blocks.TALLGRASS#1"
+      },
+      {
+        "value": "Blocks.TALLGRASS#2"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#2"
+      },
+      {
+        "value": "Blocks.SEAGRASS"
+      },
+      {
+        "value": "Blocks.TALL_SEAGRASS"
+      },
+      {
+        "value": "Blocks.AZALEA_LEAVES"
+      },
+      {
+        "value": "Blocks.FLOWERING_AZALEA_LEAVES"
+      },
+      {
+        "value": "Blocks.SAPLING#0"
+      },
+      {
+        "value": "Blocks.SAPLING#1"
+      },
+      {
+        "value": "Blocks.SAPLING#2"
+      },
+      {
+        "value": "Blocks.SAPLING#3"
+      },
+      {
+        "value": "Blocks.SAPLING#4"
+      },
+      {
+        "value": "Blocks.SAPLING#5"
+      },
+      {
+        "value": "Blocks.REEDS"
+      },
+      {
+        "value": "Blocks.AMETHYST_CLUSTER"
+      },
+      {
+        "value": "Blocks.LARGE_AMETHYST_BUD"
+      },
+      {
+        "value": "Blocks.MEDIUM_AMETHYST_BUD"
+      },
+      {
+        "value": "Blocks.SMALL_AMETHYST_BUD"
+      },
+      {
+        "value": "Blocks.TALLGRASS#2"
+      },
+      {
+        "value": "Blocks.YELLOW_FLOWER"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#0"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#1"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#2"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#3"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#4"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#5"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#6"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#7"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#8"
+      },
+      {
+        "value": "Blocks.CORNFLOWER"
+      },
+      {
+        "value": "Blocks.LILY_OF_THE_VALLEY"
+      },
+      {
+        "value": "Blocks.WITHER_ROSE"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#0"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#1"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#2"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#3"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#4"
+      },
+      {
+        "value": "Blocks.DOUBLE_PLANT#5"
+      },
+      {
+        "value": "Blocks.BROWN_MUSHROOM"
+      },
+      {
+        "value": "Blocks.RED_MUSHROOM"
+      },
+      {
+        "value": "Blocks.LEAVES#0"
+      },
+      {
+        "value": "Blocks.LEAVES#1"
+      },
+      {
+        "value": "Blocks.LEAVES#2"
+      },
+      {
+        "value": "Blocks.LEAVES#3"
+      },
+      {
+        "value": "Blocks.LEAVES2#0"
+      },
+      {
+        "value": "Blocks.LEAVES2#1"
+      },
+      {
+        "value": "Blocks.SPORE_BLOSSOM"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "belupacito_breakable",
+    "namespace": "mod"
+  }
+}

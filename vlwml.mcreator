@@ -86,6 +86,15 @@
       "metadata": {
         "type": "logic"
       }
+    },
+    {
+      "name": "BelupacitoBreakable",
+      "type": "tag",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito_breakable"
     }
   ],
   "variable_elements": [
@@ -304,18 +313,18 @@
       "subtitles.memes.coffind_meme": "",
       "item.vlwdm.belupacito.desc": "Beluga - Belupacito",
       "item.vlwdm.pigstep_remix": "Music Disc",
-      "subtitles.belupacito": "",
       "subtitles.tuber.congrats": "",
+      "subtitles.belupacito": "",
       "subtitles.marvel.avengers_assemble": "",
       "subtitles.tuber.craniac": "",
       "item.vlwdm.shulk.desc": "JamiesName - Shulk",
       "subtitles.songs.megalovania": "",
-      "item.vldm.otherside.desc": "Lena Raine - Otherside",
       "subtitles.otherside": "",
-      "item.vlwml.belupacito.desc": "Beluga - Belupacito",
+      "item.vldm.otherside.desc": "Lena Raine - Otherside",
       "item.vldm.otherside": "Music disc",
-      "subtitles.minigames.battle.music": "",
+      "item.vlwml.belupacito.desc": "Beluga - Belupacito",
       "gamerule.doBelupacitoBeatdrop": "Do Belupacito Beatdrop",
+      "subtitles.minigames.battle.music": "",
       "item.vldm.shulk": "Music disc",
       "item.vldm.sus": "Sus",
       "subtitles.memes.suniversal": "",
@@ -378,5 +387,5 @@
     "modElementsPackage": "net.tsotciri.vlwml",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100351610
+  "mcreatorVersion": 202100352418
 }

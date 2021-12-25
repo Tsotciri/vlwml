@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "function",
   "definition": {
-    "code": "/say eee",
+    "code": "execute at @e[name=\"west\"] run particle cloud ~ ~ ~ 0 10 10 0.0 100 force\nexecute at @e[name=\"west\"] run tp @e[name=\"west\"] ~-1 ~ ~\nexecute at @e[name=\"west\"] run fill ~ ~-10 ~-10 ~ ~10 ~10 air replace #vlwml:belupacito_breakable\n\nexecute at @e[name=\"south\"] run particle cloud ~ ~ ~ 10 10 0 0.0 100 force\nexecute at @e[name=\"south\"] run tp @e[name=\"south\"] ~ ~ ~1\nexecute at @e[name=\"south\"] run fill ~-10 ~-10 ~ ~10 ~10 ~ air replace #vlwml:belupacito_breakable\n\nexecute at @e[name=\"north\"] run particle cloud ~ ~ ~ -10 10 0 0.0 100 force\nexecute at @e[name=\"north\"] run tp @e[name=\"north\"] ~ ~ ~-1\nexecute at @e[name=\"north\"] run fill ~10 ~-10 ~ ~-10 ~10 ~ air replace #vlwml:belupacito_breakable\n\nexecute at @e[name=\"east\"] run particle cloud ~ ~ ~ 0 10 -10 0.0 100 force\nexecute at @e[name=\"east\"] run tp @e[name=\"east\"] ~1 ~ ~\nexecute at @e[name=\"east\"] run fill ~ ~-10 ~10 ~ ~10 ~-10 air replace #vlwml:belupacito_breakable",
     "name": "belupacito_beat_drop_func_extra",
     "namespace": "mod"
   }
