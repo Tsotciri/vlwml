@@ -1,0 +1,9 @@
+{
+  "_fv": 24,
+  "_type": "function",
+  "definition": {
+    "code": "kill @e[name=\"south\"]\nkill @e[name=\"west\"]\nkill @e[name=\"north\"]\nkill @e[name=\"east\"]\nsay ended",
+    "name": "belupacito_beat_drop_end",
+    "namespace": "mod"
+  }
+}

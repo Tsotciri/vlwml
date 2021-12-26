@@ -95,6 +95,98 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "belupacito_breakable"
+    },
+    {
+      "name": "SuperPicaxBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "super_picax_block_destroyed_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SuperPicaxLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "super_picax_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "SuperPicax",
+      "type": "tool",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "super_picax"
+    },
+    {
+      "name": "SuperPicaxRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "super_picax_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BelupacitoBeatDropEnd",
+      "type": "function",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belupacito_beat_drop_end"
     }
   ],
   "variable_elements": [
@@ -313,11 +405,13 @@
       "subtitles.memes.coffind_meme": "",
       "item.vlwdm.belupacito.desc": "Beluga - Belupacito",
       "item.vlwdm.pigstep_remix": "Music Disc",
-      "subtitles.tuber.congrats": "",
       "subtitles.belupacito": "",
+      "subtitles.tuber.congrats": "",
+      "item.vlwml.super_picax": "Super Picax",
       "subtitles.marvel.avengers_assemble": "",
       "subtitles.tuber.craniac": "",
       "item.vlwdm.shulk.desc": "JamiesName - Shulk",
+      "death.attack.ratio": "%1$s got rationed",
       "subtitles.songs.megalovania": "",
       "subtitles.otherside": "",
       "item.vldm.otherside.desc": "Lena Raine - Otherside",
@@ -338,7 +432,6 @@
       "subtitles.memes.nyan": "",
       "item.vlwdm.belupacito": "Music disc",
       "item.vldm.belupacito.desc": "Beluga - Belupacito",
-      "death.attack.beatdrop": "%1$s\\\u0027 Eardrums were erupted, along with their head",
       "item.vlwml.otherside": "Music disc",
       "item.vlwml.otherside.desc": "Lena Raine - Otherside",
       "item.vldm.belupacito": "Music disc",
@@ -374,7 +467,7 @@
     "description": "This is the VillageWars Music Library an addon to the VLWDM (VillageWars Dedicated Mod)       ",
     "author": "Tsotciri",
     "websiteURL": "https://youtube.com",
-    "license": "Academic Free License v3.0",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "otherside_icon",

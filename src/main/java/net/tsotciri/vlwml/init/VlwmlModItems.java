@@ -4,6 +4,7 @@
  */
 package net.tsotciri.vlwml.init;
 
+import net.tsotciri.vlwml.item.SuperPicaxItem;
 import net.tsotciri.vlwml.item.ShulkItem;
 import net.tsotciri.vlwml.item.OthersideItem;
 import net.tsotciri.vlwml.item.BelupacitoItem;
@@ -23,6 +24,7 @@ public class VlwmlModItems {
 	public static final Item OTHERSIDE = register(new OthersideItem());
 	public static final Item SHULK = register(new ShulkItem());
 	public static final Item BELUPACITO = register(new BelupacitoItem());
+	public static final Item SUPER_PICAX = register(new SuperPicaxItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

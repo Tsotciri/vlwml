@@ -1,0 +1,42 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "super_picax_texture",
+    "customModelName": "Normal",
+    "name": "Super Picax",
+    "specialInfo": [
+      "Super Picax"
+    ],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 5,
+    "efficiency": 3.0,
+    "attackSpeed": 2.0,
+    "enchantability": 3,
+    "damageVsEntity": 3.5,
+    "usageCount": 100,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [
+      {
+        "value": "Items.DIAMOND"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "SuperPicaxRightClickedOnBlock"
+    },
+    "onEntityHitWith": {
+      "name": "SuperPicaxLivingEntityIsHitWithTool"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "SuperPicaxBlockDestroyedWithTool"
+    }
+  }
+}

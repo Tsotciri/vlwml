@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "vlwml:items/super_picax_texture"
+  }
+}
