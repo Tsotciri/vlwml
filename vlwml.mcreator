@@ -1,5 +1,4 @@
 {
-  "id_map": {},
   "mod_elements": [
     {
       "name": "Otherside",
@@ -7,7 +6,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "otherside"
     },
     {
@@ -16,7 +14,6 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shulk"
     },
     {
@@ -25,7 +22,6 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "belupacito"
     },
     {
@@ -34,7 +30,6 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "belupacito_beat_drop",
       "metadata": {
         "dependencies": [
@@ -63,7 +58,6 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "belupacito_beat_drop_func"
     },
     {
@@ -72,7 +66,6 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "belupacito_beat_drop_func_extra"
     },
     {
@@ -81,7 +74,6 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "doBelupacitoBeatdrop",
       "metadata": {
         "type": "logic"
@@ -93,7 +85,6 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "belupacito_breakable"
     },
     {
@@ -102,7 +93,6 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "super_picax_block_destroyed_with_tool",
       "metadata": {
         "dependencies": [
@@ -135,7 +125,6 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "super_picax_living_entity_is_hit_with_tool",
       "metadata": {
         "dependencies": []
@@ -147,7 +136,6 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "super_picax"
     },
     {
@@ -156,7 +144,6 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "super_picax_right_clicked_on_block",
       "metadata": {
         "dependencies": [
@@ -185,7 +172,6 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "belupacito_beat_drop_end"
     }
   ],
@@ -413,12 +399,12 @@
       "item.vlwdm.shulk.desc": "JamiesName - Shulk",
       "death.attack.ratio": "%1$s got rationed",
       "subtitles.songs.megalovania": "",
-      "subtitles.otherside": "",
       "item.vldm.otherside.desc": "Lena Raine - Otherside",
-      "item.vldm.otherside": "Music disc",
+      "subtitles.otherside": "",
       "item.vlwml.belupacito.desc": "Beluga - Belupacito",
-      "gamerule.doBelupacitoBeatdrop": "Do Belupacito Beatdrop",
+      "item.vldm.otherside": "Music disc",
       "subtitles.minigames.battle.music": "",
+      "gamerule.doBelupacitoBeatdrop": "Do Belupacito Beatdrop",
       "item.vldm.shulk": "Music disc",
       "item.vldm.sus": "Sus",
       "subtitles.memes.suniversal": "",
@@ -480,5 +466,5 @@
     "modElementsPackage": "net.tsotciri.vlwml",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100352418
+  "mcreatorVersion": 202100353117
 }
